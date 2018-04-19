@@ -29,4 +29,8 @@
         </plugins>
         <finalName>verapdf-validation-rest</finalName>
     </build>
+
+    <modules>
+        <module>verapdf-validation-rest-javaee7</module>
+    </modules>
 </project>

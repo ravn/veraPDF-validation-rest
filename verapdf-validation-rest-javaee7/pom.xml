@@ -12,6 +12,14 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.verapdf/validation-model -->
+        <dependency>
+            <groupId>org.verapdf</groupId>
+            <artifactId>validation-model</artifactId>
+            <!-- 2018-01-16 -->
+            <version>1.10.5</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>verapdf-validation-rest-javaee7</finalName>
