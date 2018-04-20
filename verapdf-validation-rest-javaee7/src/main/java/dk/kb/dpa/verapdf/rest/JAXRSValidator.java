@@ -48,7 +48,7 @@ public class JAXRSValidator {
 
         https://github.com/veraPDF/veraPDF-integration-tests/blob/integration/pom.xml#L83.
          */
-        System.err.println("in routine");
+        // System.err.println("in routine url=" + url);
         String flavorId = "1b";
         boolean prettyXml = true;
         PDFAFlavour flavour = PDFAFlavour.byFlavourId(flavorId);
@@ -61,23 +61,10 @@ public class JAXRSValidator {
             XmlSerialiser.toXml(result, baos, prettyXml, false);
             final byte[] byteArray = baos.toByteArray();
             return new String(byteArray, StandardCharsets.UTF_8);  // string encoding not yet debugged
-//        } catch (Exception e) {
-//            throw new RuntimeException("validation failed", e);
-//        } catch (EncryptedPdfException e) {
-//            throw new RuntimeException("Encrypted PDF at " + url, e);
-//        } catch (ModelParsingException e) {
-//            e.printStackTrace();
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException("MalformedURLException for " + url, e);
-//        } catch (IOException e) {
-//            throw new RuntimeException()
-//        } catch (ValidationException e) {
-//            throw new RuntimeException("validation exception " + e.getMessage(), e);
-//        } catch (JAXBException e) {
-//            throw new RuntimeException("JAXBException: " + e.getMessage(), e);
         } catch (Exception e) {
+            // Hook to log exception to console if debugging.
             e.printStackTrace(System.err);
-            return e.getMessage();
+            throw e;
         }
     }
 
