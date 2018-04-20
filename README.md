@@ -11,3 +11,10 @@ Used
 to generate basic web application project.
 
 /tra 2018-04-19
+
+Java EE 7 project works out of the box with Glassfish 4 and Wildfly 8.
+
+TomEE 7.0.4 dislikes the url encoded Bitfinder URLs which we need.  See https://stackoverflow.com/a/36221241/53897 for fixes.
+
+
+/tra 2018-04-20

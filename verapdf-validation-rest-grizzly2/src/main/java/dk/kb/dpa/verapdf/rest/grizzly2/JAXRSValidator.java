@@ -1,4 +1,4 @@
-package dk.kb.dpa.verapdf.rest;
+package dk.kb.dpa.verapdf.rest.grizzly2;
 
 import org.verapdf.core.XmlSerialiser;
 import org.verapdf.pdfa.Foundries;
@@ -49,6 +49,7 @@ public class JAXRSValidator {
         https://github.com/veraPDF/veraPDF-integration-tests/blob/integration/pom.xml#L83.
          */
         System.err.println("in routine");
+
         String flavorId = "1b";
         boolean prettyXml = true;
         PDFAFlavour flavour = PDFAFlavour.byFlavourId(flavorId);
