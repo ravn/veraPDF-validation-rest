@@ -10,8 +10,8 @@ import org.verapdf.pdfa.results.ValidationResult;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -32,9 +32,8 @@ public class JAXRSValidator {
     }
 
     @GET
-    @Path("{url}")
     @Produces(MediaType.APPLICATION_XML)
-    public String validate(@PathParam("url") String url) throws Exception {
+    public String validate(@QueryParam("url") String url) throws Exception {
 
         //return Json.createObjectBuilder().add("url", url).build();
         // return "<root>" + url + "</root>";
@@ -48,7 +47,7 @@ public class JAXRSValidator {
 
         https://github.com/veraPDF/veraPDF-integration-tests/blob/integration/pom.xml#L83.
          */
-        System.err.println("in routine");
+         System.err.println("in routine");
 
         String flavorId = "1b";
         boolean prettyXml = true;

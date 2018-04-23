@@ -11,7 +11,7 @@
 </p>
 
 <script>
-    const baseUrl = "verapdf/validate/";
+    const baseUrl = "verapdf/validate?url=";
 
     const urlInput = document.querySelector("#url");
     const link = document.querySelector("#finalurl");
